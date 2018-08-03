@@ -1,6 +1,7 @@
 package com.effevtive.java;
 
 import com.effevtive.java.applet.TestProtect;
+import com.effevtive.java.extendsExample.Father;
 import com.effevtive.java.object.ConstructorMultiParameter;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -60,6 +61,13 @@ public class Test {
     System.out.println(CollectionUtils.sizeIsEmpty(null));
 
     TestProtect testProtect=new TestProtect();
+
+    try {
+      Father father=new Father();
+      father.showMessage();
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
 
   }
 

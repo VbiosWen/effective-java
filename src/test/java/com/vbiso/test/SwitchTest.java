@@ -1,5 +1,9 @@
 package com.vbiso.test;
 
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.function.Function;
 import org.junit.Test;
 
 /**
@@ -36,6 +40,43 @@ public class SwitchTest {
     System.out.println(false);
 
 
+  }
+
+
+
+  @Test
+  public void testExpire(){
+    System.out.println("");
+
+    Long time=100L;
+
+    double pageNod=time/3.0;
+
+    System.out.println(pageNod);
+  }
+
+
+  @Test
+  public void testJAVA(){
+    List<String> list=new ArrayList<>();
+    Function function= o -> {
+      List<String> list1= (List) o;
+      list1.add("teest");
+      return list1;
+    };
+    @SuppressWarnings("unchecked")
+    List<String> apply = (List<String>) function.apply(list);
+    apply.forEach(System.out::println);
+    String a="13434";
+    Integer b=applyMethod(a, Integer::parseInt);
+    System.out.println(a instanceof String);
+    System.out.println(b instanceof Integer);
+
+  }
+
+
+  public static int applyMethod(String number,Function<String,Integer> function){
+    return function.apply(number);
   }
 
 }

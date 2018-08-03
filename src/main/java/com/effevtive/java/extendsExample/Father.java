@@ -17,6 +17,7 @@ public class Father {
   }
 
   public void showMessage(){
+    int i=1/0;
     System.out.println("show father message");
   }
 

@@ -3,7 +3,6 @@ package com.effevtive.java;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.Socket;
-import java.net.UnknownHostException;
 import java.util.Scanner;
 
 /**
@@ -28,4 +27,18 @@ public class SocketTest {
     }
   }
 
+    /**
+     * @Author: wenliujie
+     * @Description:
+     * @Date: Created in 上午11:57 2018/9/11
+     * @Modified By:
+     */
+    public static class ActionBase {
+
+
+        protected void sout(){
+            System.out.println("tets");
+        }
+
+    }
 }

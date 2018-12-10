@@ -18,7 +18,12 @@ public class ComareTest {
 
   private List<Integer> time;
 
-
+  /**
+   *  比较大小类
+   * @param o1
+   * @param o2
+   * @return
+   */
   public static int compare(ComareTest o1,ComareTest o2){
     return o1.getTime().size()>o2.getTime().size()?1:-1;
   }
@@ -40,12 +45,7 @@ public class ComareTest {
     ComareTest comareTest2=new ComareTest();
     comareTest2.setTime(Arrays.asList(1,2,3));
     list.add(comareTest2);
-    Collections.sort(list, new Comparator<ComareTest>() {
-      @Override
-      public int compare(ComareTest o1, ComareTest o2) {
-        return ComareTest.compare(o1,o2);
-      }
-    });
-    System.out.println(list.toArray());
+    list.sort((Comparator<ComareTest>) (o1, o2) -> compare(o1, o2));
+    System.out.println(Arrays.toString(list.toArray()));
   }
 }

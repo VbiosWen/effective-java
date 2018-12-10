@@ -14,6 +14,14 @@ public abstract class AbstractAnimal {
 
   private long id;
 
+  public AbstractAnimal() {
+  }
+
+  public AbstractAnimal(String name, String type) {
+    this.name = name;
+    this.type = type;
+  }
+
   public String getName() {
     return name;
   }

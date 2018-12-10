@@ -42,6 +42,45 @@ public class SwitchTest {
 
   }
 
+  @Test
+  public void testSwitchList(){
+    int i=3;
+
+    switch (i){
+      case 1:
+      case 2:
+      case 3:
+      case 4:
+      case 5:{
+        System.out.println(i);
+      }
+      break;
+      default:break;
+    }
+
+  }
+
+  @Test
+  public void testSwitchd(){
+    int i=1;
+    switch (i){
+      case 1:{
+        System.out.println(1);
+      }
+      case 2:{
+        System.out.println("test");
+        break;
+      }
+    }
+  }
+
+
+  @Test
+  public void testHandler(){
+    boolean hasSend;
+    hasSend=true;
+    System.out.println(hasSend);
+  }
 
 
   @Test

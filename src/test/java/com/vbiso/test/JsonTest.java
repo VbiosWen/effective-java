@@ -1,6 +1,8 @@
 package com.vbiso.test;
 
+import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.effevtive.java.object.TestDO;
 import java.util.HashMap;
 import java.util.Map;
 import org.junit.Test;
@@ -26,5 +28,31 @@ public class JsonTest {
     String s = JSONObject.toJSONString(map);
     System.out.println(s);
   }
+
+  @Test
+  public void testJsonParse(){
+    String meta=null;
+    JSONObject jsonObject = JSON.parseObject(meta);
+    System.out.println(jsonObject.toJSONString());
+  }
+
+  @Test
+  public void testInt(){
+    TestDO testDO=new TestDO();
+    int d=testDO.getId();
+    int n=d/100;
+    System.out.println(n);
+    System.out.println(System.currentTimeMillis()-24*60*60*1000);
+  }
+
+
+  @Test
+  public void testJson(){
+    String metaData="{\"title\":\"\"}";
+    JSONObject jsonObject = JSON.parseObject(metaData);
+    jsonObject.put("activity_tag",2);
+    System.out.println(jsonObject.toJSONString());
+  }
+
 
 }

@@ -1,5 +1,7 @@
 package com.effevtive.java.object;
 
+import com.alibaba.fastjson.JSON;
+
 /**
  * @Author: wenliujie
  * @Description:
@@ -8,9 +10,23 @@ package com.effevtive.java.object;
  */
 public class Pig extends AbstractAnimal {
 
+
+  public Pig() {
+  }
+
+  public Pig(String name, String sex) {
+    super(name,sex);
+  }
+
   @Override
   protected Object clone() throws CloneNotSupportedException {
    Pig pig=new Pig();
    return pig;
   }
+
+  public static void main(String[] args){
+    Pig pig = new Pig("test", "test");
+    System.out.println(JSON.toJSONString(pig));
+  }
+
 }
